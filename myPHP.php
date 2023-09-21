@@ -32,19 +32,7 @@
 
     //show array in the first time
     if(!isset($_SESSION['array_called'])){
-        $array = array();
-        $i=0;
-        while($i<3){
-            $array[] .= "[".$i ."] => ". $nums[$i] ." ";
-            $i++;
-        }
-        echo "Array(".implode("",$array).")";
-
-        /*$array[] = $numsString;
-        $_SESSION['array'] = $array;
-        foreach($_SESSION['array'] as $key => $value){
-            print_r($value);
-        }*/
+        print_r($nums);
 
         $_SESSION['array_called']="true";
     }else{
@@ -61,12 +49,7 @@
         //按第二次後的顯示
         foreach($_SESSION['xnu'] as $value){
             echo $value;
-        }
-        /*if(isset($_SESSION['xnu'])){
-            foreach($_SESSION['xnu'] as $value){
-                echo $value;
-            }
-        }*/       
+        }       
         
         //假設這 3 位數用 ABC 排列，如果abs(B-A)=abs(C-B)就停止
         $abs=abs($nums[1]-$nums[0]);
