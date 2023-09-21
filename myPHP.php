@@ -14,7 +14,6 @@
 
 <?php    
     session_start();
-    //session_destroy();
     if(!isset($_SESSION['xnu']))
         $_SESSION['xnu']=array();
 
@@ -27,8 +26,6 @@
         }
     }
     $numsString = implode('', $nums);
-    //$_SESSION['nums'] = $nums;
-    //$_SESSION['arr_num'] = $numsString;
 
     //show array in the first time
     if(!isset($_SESSION['array_called'])){
